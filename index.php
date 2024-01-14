@@ -5,8 +5,8 @@
         <body>
 
             <form method="POST" action="pesquisa.php">
-            Pesquisar:<input type="text" name="pesquisar" placeholder="PESQUISAR">
-            <input type="submit" value="ENVIAR">
+            <input type="text" name="campo_pesquisa" placeholder="Procurar">
+            <input type="submit" value="Ok">
             </form>
    
         <?php           
