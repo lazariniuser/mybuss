@@ -1,16 +1,11 @@
 <?php
-    $servidor = "localhost";
-    $usuario = "root";
-    $senha = "";
-    $dbname = "funildevendas";
-    //Criar a conexao
-    $conn = mysqli_connect($servidor, $usuario, $senha, $dbname);
+
+    include "connect.php";
+
+    $query_pesquisa = "SELECT * FROM func WHERE nome LIKE "%$campo_pesquisa%" LIMIT 3";
+    $pdo_pesquisa = $pdo->query($query_pesquisa);
+    while ($pesquisa = $pdo_pesquisa->fetch(PDO::FETCH_ASSOC)) {
     
-    $pesquisar = $_POST['pesquisar'];
-    $result_cursos = "SELECT * FROM cursos WHERE nome LIKE '%$pesquisar%' LIMIT 5";
-    $resultado_cursos = mysqli_query($conn, $result_cursos);
+        
     
-    while($rows_cursos = mysqli_fetch_array($resultado_cursos)){
-        echo "Nome do curso: ".$rows_cursos['nome']."<br>";
     }
-?>
