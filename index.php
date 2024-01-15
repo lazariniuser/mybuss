@@ -3,11 +3,6 @@
             MyBusi!
         </title>
         <body>
-
-            <form method="POST" action="pesquisa.php">
-            <input type="search" name="campo_pesquisa" placeholder="Procurar">
-            <input type="submit" value="Ok">
-            </form>
    
         <?php           
             include "connect.php";
