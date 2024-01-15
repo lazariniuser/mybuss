@@ -5,7 +5,7 @@
         <body>
 
             <form method="POST" action="pesquisa.php">
-            <input type="text" name="campo_pesquisa" placeholder="Procurar">
+            <input type="search" name="campo_pesquisa" placeholder="Procurar">
             <input type="submit" value="Ok">
             </form>
    
