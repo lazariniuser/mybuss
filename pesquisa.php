@@ -10,6 +10,7 @@
     ?>
     
     <html>
+        <h6 class="text-center">Resultados exibidos para "<?php echo $campo_pesquisa ?>"</h6>
         <table class='table text-center'>
     
            <?php imprime($pdo_pesquisa) ?> 
