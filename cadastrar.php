@@ -6,6 +6,7 @@ include 'connect.php';
 $nome = $_POST['nome'];
 $email = $_POST['email'];
 $celular = $_POST['celular'];
+$tipo = "colab";
 
 
 
@@ -20,7 +21,7 @@ if( empty($nome) || empty($email) || empty($celular)){
 
 }
 else {
-    $sql = "INSERT INTO func (nome, email, celular) VALUES ('$nome', '$email', '$celular')";
+    $sql = "INSERT INTO func (nome, email, celular, tipo) VALUES ('$nome', '$email', '$celular', '$tipo')";
     $stmt= $pdo->prepare($sql);
     $stmt->execute();
     header ('location: index.php');
