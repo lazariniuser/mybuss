@@ -8,7 +8,7 @@ require_once 'connect.php';
 
 <form action="cad.php" class="form-group" method="POST">
     <input type="text" class="form-control" name="nome" placeholder="Seu nome completo" required>
-
+    <input type="text" class="form-control" name="nome_empresa" placeholder="Nome da empresa" required>
     <select class="form-control" name="tipo" required>
         <option value="Colaborador">Colaborador</option>
         <option value="Proprietário">Proprietário</option>

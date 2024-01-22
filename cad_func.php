@@ -10,11 +10,9 @@ $datanasc = $_POST['datanascimento'];
 $pasd = $_POST['snh'];
 $conf = $_POST['senhaconfirma'];
 $end = $_POST['endereco'];
-$nome_empresa = $_POST['nome_empresa'];
 
 
-if (isset($_SESSION['empresa_id'])) {
-    $empresa_id = $_SESSION['$nome_empresa'];
+    
 
     if ($conf == $pasd) {
         if (empty($nome) || empty($email_aluno) || empty($celular) || empty($datanasc) || empty($pasd) || empty($end)) {
@@ -22,17 +20,15 @@ if (isset($_SESSION['empresa_id'])) {
                   <h3 class="text-muted text-center">Infelizmente não conseguimos fazer seu cadastro. Talvez você tenha deixado algum campo vazio.</h3><br>
                   <a href="cadastroconta.php" class="d-block text-center"><button class="btn btn-light"><h1>Tentar novamente</button></h1></a>';
         } else {
-            $sql = "INSERT INTO contas (nome, email, celular, datanascimento, snh, tipo, endereco, empresa) VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
+            $sql = "INSERT INTO func (nome, email, celular, datanascimento, snh, tipo, endereco) VALUES (?, ?, ?, ?, ?, ?, ?)";
             $stmt = $pdo->prepare($sql);
             
-            $stmt->execute([$nome, $email_aluno, $celular, $datanasc, $pasd, $end, $nome_empresa]);
-            header('location: index.php');
+            $stmt->execute([$nome, $email_aluno, $celular, $datanasc, $pasd, $end]);
+            header('location: lista_func.php');
         }
     } else {
         require_once "cadastroconta.php";
         echo "<h5 class='text-center btn-danger p-3'>Senhas não coincidem</h5>";
     }
-} else {
-    echo "Erro: Sessão 'empresa_id' não definida.";
-}
+
 ?>
