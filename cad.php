@@ -10,7 +10,7 @@ $nome = $_POST['nome'];
 $email_aluno = $_POST['email'];
 $celular = $_POST['celular'];
 $datanasc = $_POST['datanascimento'];
-$pasd = $_POST['senha'];
+$pasd = $_POST['snh'];
 $tipo = "owner";
 
 

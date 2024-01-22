@@ -4,9 +4,8 @@
         </title>
         <body>
         <?php           
-            include "connect.php";
-            include "cabecalho.php";
             require_once 'verifica.php';
+            require_once 'cabecalho.php';
 
         ?>
 

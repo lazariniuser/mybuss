@@ -2,7 +2,7 @@
     include "cabecalho.php";
     include "connect.php";
 
-    $select_type_profile = "SELECT * FROM `func`";
+    $select_type_profile = "SELECT * FROM `contas`";
 
     $query_type = $pdo->query($select_type_profile);
 

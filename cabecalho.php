@@ -29,7 +29,7 @@
             <li><a class="dropdown-item" href="lista_func.php">Colaboradores</a></li>
             <li><a class="dropdown-item" href="config.php">Configurações</a></li>
             <li><hr class="dropdown-divider"></li>
-            <li><?php include "logout.php";?></li>
+            <li><a href="logout.php">Sair</a></li>
           </ul>
         </li>
         <li class="nav-item">

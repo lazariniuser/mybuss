@@ -1,5 +1,5 @@
 <?php
-    include 'connect.php';
+    require_once 'connect.php';
  
 
 
@@ -7,10 +7,10 @@ class Usuario{
     public function login($email, $senha){
         global $pdo;
 
-        $sql = "SELECT * FROM contas WHERE email = :email AND senha = :senha";
+        $sql = "SELECT * FROM contas WHERE email = :email AND snh = :snh";
         $sql = $pdo->prepare($sql);
         $sql->bindValue("email", $email);
-        $sql->bindValue("senha", $senha);
+        $sql->bindValue("snh", $senha);
         $sql->execute();
 
         if($sql->rowCount() > 0){

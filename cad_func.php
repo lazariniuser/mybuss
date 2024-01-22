@@ -10,7 +10,7 @@ $nome = $_POST['nome'];
 $email_aluno = $_POST['email'];
 $celular = $_POST['celular'];
 $datanasc = $_POST['datanascimento'];
-$pasd = $_POST['senha'];
+$pasd = $_POST['snh'];
 $tipo = "func";
 
 
@@ -30,7 +30,7 @@ else{
     $sql = "INSERT INTO contas (nome, email, celular, datanascimento, snh, tipo) VALUES ('$nome', '$email_aluno', '$celular', '$datanasc', '$pasd', '$tipo')";
     $stmt= $pdo->prepare($sql);
     $stmt->execute();
-    header ('location: index.php');
+    header ('location: lista_func.php');
     
 
 

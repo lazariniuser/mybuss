@@ -20,7 +20,7 @@ function imprime($s){
 
         
         $campo_pesquisa = $_POST['campo_pesquisa'];
-        $query_pesquisa = "SELECT * FROM func WHERE nome LIKE  '%$campo_pesquisa%'  LIMIT 3";
+        $query_pesquisa = "SELECT * FROM contas WHERE nome LIKE  '%$campo_pesquisa%'  LIMIT 3";
         $pdo_pesquisa = $pdo->query($query_pesquisa);
         
 

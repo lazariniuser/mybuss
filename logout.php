@@ -1,3 +1,5 @@
 <?php
-    echo "<input type='submit' class='text-center' value='Sair'>"
+    require_once "verifica.php";
+    session_destroy();
+    header('location: login.php');
 ?>

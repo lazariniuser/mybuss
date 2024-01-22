@@ -3,8 +3,8 @@
 <?php
 include "cabecalho.php";
 include "connect.php";
-include "verifica.php";
-    $query = "SELECT * FROM func";
+
+    $query = "SELECT * FROM contas WHERE tipo = 'func'";
             $stmt = $pdo->query($query);
 
             echo "
@@ -17,6 +17,7 @@ include "verifica.php";
                 <input type='password' placeholder='Senha provisória' name='snh' required>
                 <input type='email' placeholder='Email' name='email' required>
                 <input type='number' placeholder='Telefone' name='celular' required>
+                <input type='date' placeholder='Telefone' name='datanascimento' required>
                 <input type=submit class='btn btn-success' value='Enviar'>
             </form>
             
