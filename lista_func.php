@@ -3,6 +3,7 @@
 <?php
 include "cabecalho.php";
 include "connect.php";
+include "verifica.php";
     $query = "SELECT * FROM func";
             $stmt = $pdo->query($query);
 
@@ -11,8 +12,9 @@ include "connect.php";
             
             <h5>Adicionar Colaborador(a):</h5>
 
-            <form action='cadastrar.php' class='form-group w-50 text-center' method='POST'>
+            <form action='cad_func.php' class='form-group w-50 text-center' method='POST'>
                 <input type='text' placeholder='Nome' name='nome' required>
+                <input type='password' placeholder='Senha provisória' name='snh' required>
                 <input type='email' placeholder='Email' name='email' required>
                 <input type='number' placeholder='Telefone' name='celular' required>
                 <input type=submit class='btn btn-success' value='Enviar'>
