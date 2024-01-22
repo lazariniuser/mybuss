@@ -1,6 +1,7 @@
 <?php
     include "cabecalho.php";
     include "connect.php";
+    require_once "verifica.php";
 
     $select_type_profile = "SELECT * FROM `contas`";
 
